@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Running Hours</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+  .tab {
+ margin-left: 28.5em
+}
+  
+td span:last-child{
+    
+        float:right;
+}
+  .NICOBAR{
+    font-size: 17px;
+   
+
+  }
+
+  input {
+    width: 280px;
+    
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 10px;
+
+   
+}
+
+
+   .active {
+  background-color:  black ;
+}
+
+   .container {
+    padding-right: 20px;
+    padding-left: 1px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1124px;
+}
+  .img {
+    width: 100%;
+    float: left;
+  }
+.sidenav{background: #081928;
+    color: white;
+}
+a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+  .navbar-inverse {
+    background-color: #777;
+    border-color: #080808;
+}
+
+  
+* {box-sizing: border-box;} 
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+ 
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #E9E8F5;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+.topnav a.active {
+  background-color: black ;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 16px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: ;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+.Remarks{ width: 10px; }
+ th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+  .well {
+    min-height: 15px;
+    padding: 2px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: black;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+    @media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Menu</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Daily Order</a></li>
+        <li><a href="#">Machinery Status</a></li>
+        <li><a href="Pol Status.html">POL Status</a></li>
+        <li><a href="Spare List.html">Spare List </a></li>
+        <li><a href="Running Hours.html" class="active">Running Hours </a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Routines</a></li>
+        <li><a href="#">Major DIR List</a></li>
+        <li><a href="#">Miscelleneous</a></li>
+        <li><a href="Required Assistance.html">Required Assistance</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div  class="container-fluid">
+ 
+  <div class="row content">
+    <div class="col-sm-2 sidenav hidden-xs">
+
+
+    <div class="NICOBAR">  <img  src="Indian_Navy_logo.png" alt="Navy Logo" style="width:35px;height:45px; margin-top: 11px;
+"><b style="position:relative; top:8px;"> INS CAR NICOBAR</b> </img></div>
+     
+     <hr size="4" style="margin-top: 6px;">
+
+      <ul class="nav nav-pills nav-stacked" style="height:693px; display: block;">
+      
+        <li><div> <h3 style="text-align: center;">Menu</h3></div></li>
+        <li><a href="#"> <i class="fa fa-tachometer" aria-hidden="true"></i>  &nbsp;&nbsp;Dashboard</a></li>
+        <li><a href="#"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> &nbsp;&nbsp;Daily Order</a></li>
+        <li><a href="#"> <i class="fa fa-twitch" aria-hidden="true"></i> &nbsp;&nbsp;Machinery Status</a></li>
+        <li><a href="POL Status.html"> <i class="fa fa-stack-exchange" aria-hidden="true"></i> &nbsp;&nbsp;POL Status</a></li>
+        <li><a href="Spare List.html"> <i class="fa fa-wpforms" aria-hidden="true"></i> &nbsp;&nbsp;Spare List </a></li>
+        <li><a href="Running Hours.html" class="active"> <i class="fa fa-hourglass-half" aria-hidden="true"></i> &nbsp;&nbsp;Running Hours </a></li>
+        <li><a href="#"> <i class="fa fa-exchange" aria-hidden="true"></i> &nbsp;&nbsp;Returns</a></li>
+        <li><a href="#"> <i class="fa fa-ellipsis-h" aria-hidden="true"></i> &nbsp;&nbsp;Routines</a></li>
+        <li><a href="#"> <i class="fa fa-clone" aria-hidden="true"></i> &nbsp;&nbsp;Major DIR List</a></li>
+        <li><a href="#"> <i class="fa fa-map-o" aria-hidden="true"></i>  &nbsp;&nbsp;Miscelleneous</a></li>
+        <li><a href="Required Assistance.html"> <i class="fa fa-sort-amount-desc" aria-hidden="true"></i> &nbsp;&nbsp;Required Assistance</a></li>
+        <li><a href="#"> <i class="fa fa-info" aria-hidden="true"></i> &nbsp;&nbsp;Help</a></li>
+
+      </ul>
+      <br>
+    </div>
+
+    
+   
+    <div class="topnav">
+  
+  <h5  style=" border-left:  3px solid orange ;  background-color:  #081928 ; color: white; margin-top: 0px; line-height: 4.5" > &nbsp; &nbsp;ADD & VIEW  RUNNING HOURS
+</h5>
+ 
+ 
+
+<br>
+     
+    <div class="col-sm-10">
+    
+      <div class="row">
+        <div class="col-sm-4">
+          <b>Equipment</b>
+         
+              
+            <input style=" border-left: 3px solid orange;" type="text" placeholder="Enter POL Name">
+           
+          
+        </div>
+        <div class="col-sm-4">
+          <b>Monthly RM</b>
+         
+
+            <input  style=" border-left: 3px solid orange;" type="text" placeholder="Enter Preset Holding">
+            
+          
+        </div>
+        <div class="col-sm-4">
+          <b>RM Since Installation</b>
+         
+            
+           <input  style=" border-left: 3px solid orange;" type="text" placeholder="Enter Capacity">
+           
+          </div>
+        
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-8">
+          <b> RM Since Last Major Routine</b>
+         
+             <br>
+          <input  style=" border-left: 3px solid orange;" type="text" placeholder="Enter Capacity">  
+          </div>
+          <div class="col-sm-4">
+            <br>
+          <button type="button" class="btn btn-warning"><b>ADD</b></button>
+        </div>
+      </div>
+      
+  <br>
+    <div style="float: left;" class="container">
+ <div class="panel-group">
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+<div class="topnav">
+
+  <a href style="color: orange;">ADD & VIEW RUNNING HOURS</a>
+ 
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+
+  <table  class="table table-bordered">
+    <thead style="background-color:   #081928">
+      <tr>
+        <th>Column One</th>
+        <th>Column Two</th>
+        <th>Column Three</th>
+        <th>Column Four </th>
+        <th>Column Five</th>
+        <th>Column Six</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td>Alexander Stokes</td>
+        <td>andrew_hayes@yahoo.com </td>
+        <td>9</td>
+        <td>Approved</td>
+        <td>12/15/2016</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Garrett Davis</td>
+        <td>sipes.tavares@hotmail.com</td>
+        <td>15</td>
+        <td>New York</td>
+        <td>12/15/2016 </td>
+      </tr>
+       <tr>
+        <td></td>
+        <td>Maud Banks</td>
+        <td>cordelia.reynolds@hotmail.com</td>
+        <td>35</td>
+        <td>Approved</td>
+        <td>12/15/2016</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td>Garrett Davis</td>
+        <td>gianni.gusikowski@austen.ca</td>
+        <td>25</td>
+        <td>New York</td>
+        <td>12/15/2016
+ </td>
+      </tr>
+       <tr>
+        <td></td>
+        <td>Tom Jenkins</td>
+        <td>guiseppe.stark@yahoo.com</td>
+        <td>6</td>
+        <td>Approved</td>
+        <td>12/15/2016</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td>Dominic Cob</td>
+        <td>lola.gerhold@tremayne.com</td>
+        <td>17</td>
+        <td>New York</td>
+        <td>12/15/2016
+ </td>
+      </tr>
+       <tr>
+        <td></td>
+        <td>Curtis Holmes</td>
+        <td>lola.gerhold@tremayne.com</td>
+        <td>53</td>
+        <td>New York</td>
+        <td>12/15/2016
+ </td>
+      </tr>
+       <tr>
+        <td></td>
+        <td>Etta Guzman</td>
+        <td>kory.corkery@hotmail.com</td>
+        <td>75</td>
+        <td>Approved</td>
+        <td>12/15/2016
+</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td>Gilbert Olsons</td>
+        <td>libby_boyle@yahoo.com</td>
+        <td>80</td>
+        <td>New York</td>
+        <td>12/15/2016
+</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td>Francisco Holloways</td>
+        <td>blanche.denesik@gmail.com</td>
+        <td>60</td>
+        <td>Approved</td>
+        <td>12/15/2016</td>
+
+
+      </tr>
+ <td colspan="9"><span>10 Items</span><span class="tab">   FIRST &nbsp; &nbsp; PREV &nbsp; | &nbsp;</span><span>NEXT  &nbsp; &nbsp; LAST</span><span>Show</span></td>
+  </tr>
+    </tbody>
+
+  </table>
+  
+
+
+  </div>
+ 
+    </div>
+</div>
+</div>
+  <p style="text-align: center; background-color: #081928 ; color: white;">@Copyright 2019 - All rights reserved </p>
+
+
+</div>
+</body>
+</html>
